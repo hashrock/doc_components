@@ -1,5 +1,6 @@
 // Copyright 2021-2022 the Deno authors. All rights reserved. MIT license.
 
+/** @jsxRuntime classic */
 /** @jsx runtime.h */
 import { type DocNodeModuleDoc } from "../deps.ts";
 import { Markdown, type MarkdownContext } from "./markdown.tsx";

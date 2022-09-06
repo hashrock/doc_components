@@ -2,6 +2,7 @@
 
 // deno-lint-ignore-file no-explicit-any
 
+/** @jsxRuntime classic */
 /** @jsx runtime.h */
 import { apply, css, tw } from "./deps.ts";
 import { tagVariants } from "../doc/doc_common.tsx";

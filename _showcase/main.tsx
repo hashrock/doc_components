@@ -1,5 +1,6 @@
 // Copyright 2021-2022 the Deno authors. All rights reserved. MIT license.
 
+/** @jsxRuntime classic */
 /** @jsx runtime.h */
 import { type DocNode } from "../deps.ts";
 import {
@@ -157,15 +158,25 @@ app.addEventListener("error", (evt) => {
       evt.error.status <= 499)
   ) {
     if (evt.context) {
-      msg += `\n\nrequest:\n  url: ${evt.context.request.url}\n  headers: ${
+      msg += `
+
+request:
+  url: ${evt.context.request.url}
+  headers: ${
         Deno.inspect([...evt.context.request.headers])
-      }\n`;
+      }
+`;
     }
   }
   if (evt.error instanceof Error && evt.error.stack) {
-    const stack = evt.error.stack.split("\n");
+    const stack = evt.error.stack.split("
+");
     stack.shift();
-    msg += `\n\n${stack.join("\n")}\n`;
+    msg += `
+
+${stack.join("
+")}
+`;
   }
   console.error(msg);
 });

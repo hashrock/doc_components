@@ -1,5 +1,6 @@
 // Copyright 2021-2022 the Deno authors. All rights reserved. MIT license.
 
+/** @jsxRuntime classic */
 /** @jsx runtime.h */
 import { runtime } from "./services.ts";
 import { tw } from "./deps.ts";

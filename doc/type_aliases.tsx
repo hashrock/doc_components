@@ -1,5 +1,6 @@
 // Copyright 2021-2022 the Deno authors. All rights reserved. MIT license.
 
+/** @jsxRuntime classic */
 /** @jsx runtime.h */
 import { type DocNodeTypeAlias } from "../deps.ts";
 import { DocEntry, nameToId, tagVariants } from "./doc_common.tsx";
